@@ -1,0 +1,22 @@
+class Score
+ {
+     private int[] score = new int[3];
+     private string[] sub = { "m", "MDK", "Eng" };
+     public int this[int index] { get { if (index >= 0 && index < 3) return score[index]; return 0; } set { if (index >= 0 && index < 3) score[index] = value; } }
+     public void Scoree()
+     {
+         for (int i = 0; i < 3; i++) { if (score[i] > 0) Console.WriteLine($"{sub[i]}^{score[i]}");
+         }
+     }
+     internal class Program
+     {
+         static void Main(string[] args)
+         {
+             Score s = new Score();
+             s[0] = 5;
+             s[1] = 2;
+             Console.WriteLine($" оценка по мдк {s[1]}");
+
+         }
+     }
+ }
